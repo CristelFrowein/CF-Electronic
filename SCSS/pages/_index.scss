@@ -1,0 +1,247 @@
+@import "../variables/variables";
+
+/*Estilos del index*/
+
+/*Tablet y desktop version*/
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+
+  main {
+    @media (min-width: 768px), (min-width: 1280px) {
+      margin-top: 150px;
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      column-gap: 4rem;
+    }
+
+    section {
+      /*Estilos del primer contenido de index*/
+      .index-principal {
+        video {
+          width: 100%;
+          box-shadow: 0 0 10px $violeta;
+        }
+      }
+
+      /*Mobile version: primer contenido del index*/
+
+      @media (max-width: 767px) {
+        .index-principal {
+          margin-top: 20rem;
+          video {
+            width: 100%;
+            box-shadow: 0 0 10px $violeta;
+          }
+        }
+      }
+
+      /*Estilos de sección intermedia*/
+      .item-posicion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+        margin-top: 5rem;
+        min-width: 90%;
+
+        #item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            width: 150px;
+            margin-bottom: -10px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      /* mobile version: sección intermedia */
+
+      @media (max-width: 767px) {
+        .item-posicion {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          align-items: center;
+
+          #item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+              max-width: 30%;
+              margin-bottom: -10px;
+            }
+
+            p {
+              text-align: center;
+              font-size: 15px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      /*Estilos del segundo contenido del index*/
+      .index-secundario {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        .box-producto {
+          background-color: $negro;
+          width: 100%;
+          box-shadow: 0 0 10px $violeta;
+          border-radius: 5rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+
+          h2 {
+            font-weight: bold;
+            text-align: center;
+            color: $marfil;
+            transform: rotateY(0deg);
+          }
+          h2:hover {
+            transform: rotateY(360deg);
+            transition: rotateY 12s, ease-in-out 0.9s;
+            cursor: pointer;
+          }
+
+          .columnas-productos-populares {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2px;
+            align-items: center;
+
+            .producto-popular {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              img {
+                width: 80%;
+              }
+
+              img:hover {
+                transform: scale(1.2);
+                transition: transform 0.3s linear;
+                cursor: pointer;
+              }
+
+              button {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                background-color: $negro;
+                color: $marfil;
+                font-family: $fuente-secundaria;
+                font-size: 15px;
+                font-weight: bold;
+                width: 90%;
+                height: 50px;
+                border: 0.5px solid $blanco;
+                border-radius: 0.5rem;
+                box-shadow: 0 0 10px $violeta;
+
+                a {
+                  text-decoration: none;
+                  color: $marfil;
+                }
+                a:hover {
+                  color: $blanco;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+
+          /*version mobile*/
+          @media (max-width: 767px) {
+            .columnas-productos-populares {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+
+              .producto-popular {
+                img {
+                  max-width: 100%;
+                }
+                img:hover {
+                  transform: scale(1.2);
+                  transition: transform 0.3s linear;
+                  cursor: pointer;
+                }
+                button {
+                  margin-top: 3rem;
+                  margin-bottom: 3rem;
+                  background-color: $negro;
+                  color: $marfil;
+                  font-family: $fuente-secundaria;
+                  font-size: 15px;
+                  font-weight: bold;
+                  width: 90%;
+                  height: 50px;
+                  border: 0.5px solid $blanco;
+                  border-radius: 0.5rem;
+                  box-shadow: 0 0 10px $violeta;
+                  a{
+                    text-decoration: none;
+                  }
+                }
+                button:hover {
+                  color: $blanco;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    aside {
+      h3 {
+        font-weight: bold;
+        text-align: center;
+        transform: rotateY(0deg);
+      }
+      h3:hover {
+        transform: rotateY(360deg);
+        transition: rotateY 12s, ease-in-out 0.9s;
+        cursor: pointer;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          max-width: 100%;
+        }
+        a {
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+          background-color: $marfil;
+          width: 200px;
+          color: $negro;
+          font-family: $fuente-secundaria;
+          font-size: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          border-radius: 0.5rem;
+          border: 1.5px solid $negro;
+          box-shadow: 0 0 8px $violeta;
+        }
+        a:hover {
+          color: $violeta;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.contacto {
+  margin-top: 100px;
+  
+  section {
+    
+    form {
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+
+      fieldset {
+        border: none;
+        legend {
+          font-family: $fuente-principal;
+          color: $violeta;
+          font-size: 30px;
+          font-weight: bold;
+          text-align: center;
+        }
+        .contenedor {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          div {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              color: $violeta;
+              font-family: $fuente-secundaria;
+              font-size: 12px;
+              font-weight: bold;
+              text-transform: uppercase;
+              text-align: center;
+              margin-bottom: 0.5rem;
+            }
+            input {
+              margin-bottom: 0.5rem;
+              width: 350px;
+              height: 2.5rem;
+              border: none;
+              padding: 1.5rem;
+              border-radius: 0.5rem;
+              box-shadow: 0 0 10px $violeta;
+            }
+
+            textarea {
+              margin-bottom: 0.5rem;
+              width: 350px;
+              height: 20rem;
+              border: none;
+              padding: 1.5rem;
+              border-radius: 0.5rem;
+              resize: none;
+              box-shadow: 0 0 10px $violeta;
+            }
+          }
+
+          div {
+            .boton {
+              background-color: $marfil;
+              color: $violeta;
+              font-family: $fuente-secundaria;
+              font-size: 1.5rem;
+              text-align: center;
+              width: 300px;
+              padding: 1rem 3rem;
+              margin-top: 2rem;
+              margin-bottom: 0.5rem;
+              border-radius: 0.5rem;
+              border: 1px solid $negro;
+              box-shadow: 0 0 10px $violeta;
+              align-items: center;
+
+            }
+            .boton:hover {
+                cursor: pointer;
+                font-weight: bold;
+                color: $negro;
+               
+            }
+          }
+        }
+       
+      }
+    }
+  }
+}
+
+/*Version mobile*/
+
+@media (max-width: 767px){
+
+    .contacto {
+        margin-top: 200px;
+        margin-right: -2rem;
+        margin-left: -2rem;
+    }
+
+}

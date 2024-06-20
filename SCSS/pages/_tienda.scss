@@ -1,0 +1,282 @@
+/*Estilos de la tienda*/
+header {
+  /*Video presentación de la tienda*/
+  .columnas-tienda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 14.5rem;
+      
+      video {
+        width: 100%;
+        box-shadow: 0 0 10px $violeta;
+      }
+    }
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 20rem;
+}
+.tienda {
+  width: 100%;
+
+  #apartado {
+    margin-top: 2rem;
+
+    .apartado {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
+     
+      color: $negro;
+      
+
+      p {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        font-size: 15px;
+        text-align: center;
+        padding: 1rem;
+        
+        span {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 2px;
+          color: $negro;
+        }
+
+      }
+    }
+  }
+
+
+  /*Titulo de tienda*/
+  h1 {
+    font-family: $fuente-principal;
+    font-weight: bold;
+    color: $violeta;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotateY(0deg);
+  }
+  h1:hover {
+    transform: rotateY(360deg);
+    transition: rotateY 12s, ease-in-out 0.9s;
+    cursor: pointer;
+  }
+
+  /*Secciones*/
+  /*Box titulo PARA CADA SECCIÓN*/
+
+  .box-seccion {
+    box-shadow: 0 0 10px $violeta;
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-top: -5px;
+      font-family: $fuente-principal;
+      font-weight: bold;
+      color: $violeta;
+      font-size: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      transform: rotateY(0deg);
+      padding: 2rem;
+    }
+    h2:hover {
+      transform: rotateY(360deg);
+      transition: rotateY 12s, ease-in-out 0.9s;
+      cursor: pointer;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      gap: 5rem;
+      margin-bottom: 1rem;
+      margin-top: -25px;
+
+      span {
+        a {
+          font-size: 18px;
+          font-family: $fuente-principal;
+          color: $violeta;
+          text-decoration: none;
+        }
+        a:hover {
+          font-size: 18px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  /*producto posicion PARA CADA SECCIÓN*/
+  /*version mobile*/
+  @media (max-width: 767px) {
+    .producto-posicion {
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      row-gap: 1px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        border: 1px solid red;
+        img {
+          max-width: 50%;
+          padding: 2rem;
+        }
+        img:hover {
+          transform: scale(1.2);
+          transition: transform 0.3s linear;
+          cursor: pointer;
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: center;
+          font-size: 15px;
+          text-transform: uppercase;
+          span {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+        button {
+          background-color: $marfil;
+          color: $negro;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 15px;
+          max-width: 100%;
+          height: 40px;
+          border: 0.5px solid $negro;
+          border-radius: 1rem;
+          box-shadow: 0 0 10px $violeta;
+        }
+      }
+    }
+  }
+
+  /*desktop y tablet version*/
+  .producto-posicion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1px;
+
+    div {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+      img {
+        max-width: 100%;
+        padding: 2rem;
+      }
+      img:hover {
+        transform: scale(1.2);
+        transition: transform 0.3s linear;
+        cursor: pointer;
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -5px;
+        text-align: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        span {
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+      button {
+        margin-top: -10px;
+        background-color: $marfil;
+        color: $negro;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+        width: 100%;
+        height: 40px;
+        border: 0.5px solid $negro;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px $violeta;
+      }
+      button:hover {
+        color: $violeta;
+        cursor: pointer;
+      }
+    }
+  }
+
+  /*Sección: Modulos*/
+  .modulos {
+    width: 100%;
+
+    
+    /*titulo de cada div*/
+    .titulo {
+      h3 {
+        font-family: $fuente-principal;
+        font-weight: bold;
+        font-size: 30px;
+        color: $negro;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  /*seccion fundas*/
+  .fundas {
+    width: 100%;
+  }
+
+  /*seccion baterias*/
+  .baterias {
+    width: 100%;
+  }
+
+  /*seccion cargadores*/
+  .cargadores {
+    width: 100%;
+  }
+
+  /*seccion auriculares*/
+
+  .auriculares {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+}

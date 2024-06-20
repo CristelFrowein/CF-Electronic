@@ -1,0 +1,71 @@
+/*Estilos para nosotros*/
+
+.nosotros {
+  margin-top: 100px;
+  div {
+    h1 {
+      text-align: center;
+      color: $violeta;
+      transform: rotateY(0deg);
+    }
+    h1:hover {
+      transform: rotateY(360deg);
+      transition: rotateY 12s, ease-in-out 0.9s;
+      cursor: pointer;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      color: $color-principal;
+      span {
+        text-align: center;
+      }
+    }
+  }
+  .nosotros-columnas {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+
+    #nosotros-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        max-width: 50%;
+      }
+      p {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  }
+  /*version mobile*/
+  @media (max-width: 767px) {
+    .nosotros-columnas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #nosotros-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          max-width: 50%;
+        }
+        p {
+          text-align: center;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
