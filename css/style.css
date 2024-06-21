@@ -68,7 +68,13 @@ h5 {
 @media (min-width: 768px), (min-width: 1280px) {
   body {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, auto);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    margin: 0 auto;
   }
 }
 /* MEDIDAS RESPONSIVES GENERALES PARA EL MAIN */
@@ -82,8 +88,9 @@ main {
 /*tablet y desktop*/
 @media (min-width: 768px), (min-width: 1280px) {
   main {
-    max-width: 100%;
+    max-width: 95%;
     width: 100%;
+    margin: 0 auto;
   }
 }
 /*Estilos del Header: Nav*/
@@ -98,6 +105,9 @@ header nav {
   top: 0;
   left: -0.5px;
   z-index: 9999;
+  /*parte de nav que se agrega solo con la tienda
+  tablet y desktop*/
+  /*mobile*/
 }
 header nav #productos-tienda {
   width: 100%;
@@ -122,6 +132,33 @@ header nav #productos-tienda span div a:hover {
   transform: scale(1.3);
   transition: transform 0.3s ease;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  header nav #productos-tienda {
+    width: 100%;
+    margin-top: -5px;
+    box-shadow: 0 0 10px #000000;
+    display: flex;
+    justify-content: center;
+  }
+  header nav #productos-tienda span div {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  header nav #productos-tienda span div a {
+    text-decoration: none;
+    font-size: 14.5px;
+    font-family: "Tilt Neon", sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  header nav #productos-tienda span div a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 }
 header nav .posicion {
   display: flex;
@@ -193,7 +230,7 @@ footer {
   background-color: #000000;
   border-top: 1px solid #5E17EB;
   box-shadow: 0 0 10px #5E17EB;
-  max-width: 100%;
+  width: 100%;
 }
 footer div {
   display: flex;
@@ -225,7 +262,7 @@ footer div div a {
 }
 
 /*mobile version*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   footer {
     background-color: #000000;
     width: 100%;
@@ -252,12 +289,12 @@ footer div div a {
 }
 /* Logo interactivo: Nav - Footer */
 #logo-marca img {
-  width: 90%;
+  width: 80%;
   padding: 1px;
 }
 
 #logo-marca:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -631,23 +668,33 @@ footer div div a {
 /*Estilos de la tienda*/
 header {
   /*Video presentación de la tienda*/
-}
-header .columnas-tienda {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /*version mobile*/
 }
 header .columnas-tienda div {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 14.5rem;
+  margin-top: 17rem;
 }
 header .columnas-tienda div video {
-  width: 100%;
+  width: 97%;
   box-shadow: 0 0 10px #5E17EB;
 }
+@media (max-width: 767px) {
+  header .columnas-tienda div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 22rem;
+  }
+  header .columnas-tienda div video {
+    margin-top: 5rem;
+    width: 95%;
+    box-shadow: 0 0 10px #5E17EB;
+  }
+}
 
+/*scroll*/
 html {
   scroll-behavior: smooth;
   scroll-padding: 20rem;
@@ -655,12 +702,16 @@ html {
 
 .tienda {
   width: 100%;
-  /*Titulo de tienda*/
+  /*Estilos del apartado*/
+  /*tablet y desktop*/
+  /*version mobile*/
   /*Secciones*/
   /*Box titulo PARA CADA SECCIÓN*/
-  /*producto posicion PARA CADA SECCIÓN*/
+  /*tablet y desktop version*/
   /*version mobile*/
+  /*producto posicion PARA CADA SECCIÓN*/
   /*desktop y tablet version*/
+  /*version mobile*/
   /*Sección: Modulos*/
   /*seccion fundas*/
   /*seccion baterias*/
@@ -690,19 +741,31 @@ html {
   margin: 2px;
   color: #000000;
 }
-.tienda h1 {
-  font-family: "Tilt Neon", sans-serif;
-  font-weight: bold;
-  color: #5E17EB;
-  font-size: 50px;
-  text-transform: uppercase;
-  text-align: center;
-  transform: rotateY(0deg);
-}
-.tienda h1:hover {
-  transform: rotateY(360deg);
-  transition: rotateY 12s, ease-in-out 0.9s;
-  cursor: pointer;
+@media (max-width: 767px) {
+  .tienda #apartado {
+    margin-top: 2rem;
+  }
+  .tienda #apartado .apartado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 1rem;
+    color: #000000;
+  }
+  .tienda #apartado .apartado p {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+    padding: 1rem;
+  }
+  .tienda #apartado .apartado p span {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px;
+    color: #000000;
+  }
 }
 .tienda .box-seccion {
   box-shadow: 0 0 10px #5E17EB;
@@ -749,54 +812,48 @@ html {
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .tienda .producto-posicion {
+  .tienda .box-seccion {
+    box-shadow: 0 0 10px #5E17EB;
     width: 100%;
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    row-gap: 1px;
-  }
-  .tienda .producto-posicion div {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    border: 1px solid red;
   }
-  .tienda .producto-posicion div img {
-    max-width: 50%;
+  .tienda .box-seccion h2 {
+    margin-top: -5px;
+    font-family: "Tilt Neon", sans-serif;
+    font-weight: bold;
+    color: #5E17EB;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotateY(0deg);
     padding: 2rem;
   }
-  .tienda .producto-posicion div img:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s linear;
+  .tienda .box-seccion h2:hover {
+    transform: rotateY(360deg);
+    transition: rotateY 12s, ease-in-out 0.9s;
     cursor: pointer;
   }
-  .tienda .producto-posicion div p {
+  .tienda .box-seccion div {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    font-size: 15px;
-    text-transform: uppercase;
+    column-gap: 0.5rem;
   }
-  .tienda .producto-posicion div p span {
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
+  .tienda .box-seccion div span a {
+    font-size: 12px;
+    font-family: "Tilt Neon", sans-serif;
+    color: #5E17EB;
+    text-decoration: none;
+    padding: 0.5px;
   }
-  .tienda .producto-posicion div button {
-    background-color: #FFFFF0;
-    color: #000000;
+  .tienda .box-seccion div span a:hover {
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 15px;
-    max-width: 100%;
-    height: 40px;
-    border: 0.5px solid #000000;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px #5E17EB;
   }
 }
 .tienda .producto-posicion {
@@ -854,6 +911,60 @@ html {
 .tienda .producto-posicion div button:hover {
   color: #5E17EB;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .tienda .producto-posicion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    border: 2px solid blue;
+  }
+  .tienda .producto-posicion div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .tienda .producto-posicion div img {
+    max-width: 100%;
+    padding: 2rem;
+  }
+  .tienda .producto-posicion div img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s linear;
+    cursor: pointer;
+  }
+  .tienda .producto-posicion div p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0.5rem;
+  }
+  .tienda .producto-posicion div p span {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .tienda .producto-posicion div button {
+    background-color: #FFFFF0;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    max-width: 100%;
+    height: 40px;
+    border: 0.5px solid #000000;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #5E17EB;
+  }
 }
 .tienda .modulos {
   width: 100%;
