@@ -125,7 +125,8 @@ header nav #productos-tienda span div a {
   text-decoration: none;
   font-size: 18px;
   font-family: "Tilt Neon", sans-serif;
-  color: #FFFFFF;
+  color: #FFFFF0;
+  text-shadow: #5E17EB 0 3px;
   text-align: center;
 }
 header nav #productos-tienda span div a:hover {
@@ -204,7 +205,7 @@ header nav .posicion div a img:hover {
   header nav .posicion a img {
     margin-top: 5px;
     align-items: center;
-    width: 90%;
+    width: 70%;
   }
   header nav .posicion div {
     display: flex;
@@ -219,7 +220,7 @@ header nav .posicion div a img:hover {
     margin-right: 10px;
   }
   header nav .posicion div a img:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: transform 0.3s ease;
     cursor: pointer;
   }
@@ -240,17 +241,10 @@ footer div {
   margin: 10px 10px 15px 10px;
 }
 footer div a img {
-  max-width: 85%;
+  max-width: 65%;
   align-items: center;
   margin-left: 2rem;
   padding: 1rem;
-}
-footer div p {
-  color: #FFFFF0;
-  font-family: "Tilt Neon", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 15px;
 }
 footer div div {
   display: flex;
@@ -271,25 +265,26 @@ footer div div a {
   footer div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     margin: 10px 10px 15px 10px;
   }
   footer div a img {
-    max-width: 80%;
-    align-items: center;
+    max-width: 60%;
+    padding: 1rem;
+    margin-left: 5rem;
   }
-  footer div p {
-    color: #FFFFF0;
-    font-family: "Tilt Neon", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
+  footer div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer div div a {
+    width: 100%;
   }
 }
 /* Logo interactivo: Nav - Footer */
 #logo-marca img {
-  width: 80%;
+  width: 60%;
   padding: 1px;
 }
 
@@ -518,7 +513,8 @@ footer div div a {
 
 /*Estilos para nosotros*/
 .nosotros {
-  margin-top: 100px;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
   /*version mobile*/
 }
 .nosotros div h1 {
@@ -560,7 +556,11 @@ footer div div a {
   font-weight: bold;
 }
 @media (max-width: 767px) {
+  .nosotros div h1 {
+    margin-top: 200px;
+  }
   .nosotros .nosotros-columnas {
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -660,9 +660,10 @@ footer div div a {
 /*Version mobile*/
 @media (max-width: 767px) {
   .contacto {
-    margin-top: 200px;
-    margin-right: -2rem;
-    margin-left: -2rem;
+    margin: 150px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 /*Estilos de la tienda*/
@@ -706,7 +707,7 @@ html {
   /*tablet y desktop*/
   /*version mobile*/
   /*Secciones*/
-  /*Box titulo PARA CADA SECCIÓN*/
+  /*Box para cada sección intermedia*/
   /*tablet y desktop version*/
   /*version mobile*/
   /*producto posicion PARA CADA SECCIÓN*/
@@ -767,6 +768,14 @@ html {
     color: #000000;
   }
 }
+.tienda .box {
+  border: 1.5px solid #000000;
+  box-shadow: 0 0 15px #000000;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
 .tienda .box-seccion {
   box-shadow: 0 0 10px #5E17EB;
   width: 100%;
@@ -801,15 +810,17 @@ html {
   margin-top: -25px;
 }
 .tienda .box-seccion div span a {
-  font-size: 18px;
-  font-family: "Tilt Neon", sans-serif;
-  color: #5E17EB;
   text-decoration: none;
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5E17EB;
+  text-align: center;
 }
 .tienda .box-seccion div span a:hover {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .tienda .box-seccion {
@@ -859,11 +870,12 @@ html {
 .tienda .producto-posicion {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  column-gap: 1px;
+  grid-template-columns: repeat(6, 2fr);
+  column-gap: 1rem;
 }
 .tienda .producto-posicion div {
   max-width: 100%;
+  max-height: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -872,8 +884,8 @@ html {
   margin-top: 1rem;
 }
 .tienda .producto-posicion div img {
-  max-width: 100%;
-  padding: 2rem;
+  max-width: 80%;
+  padding: 1px;
 }
 .tienda .producto-posicion div img:hover {
   transform: scale(1.2);
@@ -885,9 +897,9 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: -5px;
   text-align: center;
-  font-size: 15px;
+  padding: 0.5px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .tienda .producto-posicion div p span {
@@ -897,16 +909,18 @@ html {
 }
 .tienda .producto-posicion div button {
   margin-top: -10px;
+  margin-bottom: 2rem;
   background-color: #FFFFF0;
   color: #000000;
+  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
-  width: 100%;
+  width: 90%;
   height: 40px;
   border: 0.5px solid #000000;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px #5E17EB;
+  box-shadow: 0 0 10px #000000;
+  border-radius: 0.5rem;
 }
 .tienda .producto-posicion div button:hover {
   color: #5E17EB;

@@ -1,8 +1,7 @@
 .contacto {
   margin-top: 100px;
-  
+
   section {
-    
     form {
       width: 100%;
       margin: 0 auto;
@@ -73,17 +72,14 @@
               border: 1px solid $negro;
               box-shadow: 0 0 10px $violeta;
               align-items: center;
-
             }
             .boton:hover {
-                cursor: pointer;
-                font-weight: bold;
-                color: $negro;
-               
+              cursor: pointer;
+              font-weight: bold;
+              color: $negro;
             }
           }
         }
-       
       }
     }
   }
@@ -91,12 +87,11 @@
 
 /*Version mobile*/
 
-@media (max-width: 767px){
-
-    .contacto {
-        margin-top: 200px;
-        margin-right: -2rem;
-        margin-left: -2rem;
-    }
-
+@media (max-width: 767px) {
+  .contacto {
+    margin: 150px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
