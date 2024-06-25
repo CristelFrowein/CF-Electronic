@@ -873,25 +873,25 @@ html {
 .tienda .producto-posicion {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 2fr);
-  column-gap: 1rem;
+  grid-template-columns: repeat(3, 2fr);
+  align-items: center;
+  column-gap: 0.5rem;
 }
 .tienda .producto-posicion div {
   max-width: 100%;
-  max-height: 60%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 .tienda .producto-posicion div img {
-  max-width: 80%;
+  max-width: 60%;
   padding: 1px;
+  margin-top: -0.2rem;
 }
 .tienda .producto-posicion div img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: transform 0.3s linear;
   cursor: pointer;
 }
@@ -904,6 +904,7 @@ html {
   padding: 0.5px;
   font-size: 14px;
   text-transform: uppercase;
+  margin-top: -1.5px;
 }
 .tienda .producto-posicion div p span {
   font-weight: bold;
@@ -919,7 +920,7 @@ html {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
-  width: 90%;
+  width: 60%;
   height: 40px;
   border: 0.5px solid #000000;
   box-shadow: 0 0 10px #000000;
